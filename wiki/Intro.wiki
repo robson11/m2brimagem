@@ -1,0 +1,49 @@
+#summary Página de apresentação do manual / capa.
+#labels Featured
+
+= Introdução =
+
+class.imagem.php
+*versão:* 0.4a
+*Autores:* Paulo Coutinho + Davi Tavares Ferreira
+	
+== O que faz atualmente? ==
+
+* converte imagens
+* redimensiona imagens, mantendo proporção
+* flip horizontal / vertical
+* girar imagem
+* marca d'água texto
+* marca d'água (imagem)
+	
+== Falta implementar ==
+
+* cropagem (sem redimensionamento)
+* posicionamento das marcas d'água por porcentagem (?)
+* cor de fundo na legenda em texto (?)
+* resize por porcentagem (extends?)
+* crop por porcentagem (extends?)
+* ??
+	
+== Exemplo de uso: ==
+{{{	
+include('class.imagem.php');
+
+// instancia objeto e carrega imagem
+$oImg = new imagem('2.jpg');
+$valida = $oImg->valida();
+
+if ($valida == 'OK') {
+    $rgb	= array('100','133','98');
+    $oImg->redimensiona(400,200,'fill',$rgb);
+    $oImg->flip('h');
+    $rgb	= array(255,255,255);
+    $oImg->legenda('teste de legenda','12',200,100,$rgb,true,'ariblk.ttf');
+    $oImg->girar('-170',$rgb);
+    $oImg->geraDestino('',false);
+} else {
+    die($valida);
+}
+}}}
+
+
