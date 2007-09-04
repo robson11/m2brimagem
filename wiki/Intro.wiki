@@ -7,6 +7,7 @@
 
   *  *versão:* 0.4a
   *  *Autores:* Paulo Coutinho + Davi Tavares Ferreira
+  *  [http://www.m2brnet.com www.m2brnet.com]
 	
 ==O que faz atualmente?==
 
@@ -28,23 +29,31 @@
 	
 ==Exemplo de uso:==
 {{{	
+// include da classe imagem
 include('class.imagem.php');
 
 // instancia objeto e carrega imagem
-$oImg = new imagem('2.jpg');
+$oImg = new imagem('3.jpg');
+// valida imagem
 $valida = $oImg->valida();
 
 if ($valida == 'OK') {
-    $rgb	= array('100','133','98');
-    $oImg->redimensiona(400,200,'fill',$rgb);
-    $oImg->flip('h');
-    $rgb	= array(255,255,255);
-    $oImg->legenda('teste de legenda','12',200,100,$rgb,true,'ariblk.ttf');
-    $oImg->girar('-170',$rgb);
-    $oImg->geraDestino('',false);
+	// redimensiona imagem, cropando
+	$oImg->redimensiona(400,200,'crop','');
+	// flipa imagem horizontalmente
+	$oImg->flip('h');
+	// define cor da legenda
+	$rgb	= array(255,255,255);
+	// adiciona legenda em texto
+	$oImg->legenda('scarlett johansson','11','20','20',$rgb,true,'ariblk.ttf');
+	// adiciona marca d'água
+	$oImg->marca('marca.png',40,100,100);
+	// cria imagem de saída no browser, sem salvar
+	$oImg->geraDestino('1.png',false);
 } else {
-    die($valida);
-}
+	// imagem inválida
+	die($valida);
+}	
 }}}
 
 
