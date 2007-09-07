@@ -6,7 +6,7 @@
 ==class.imagem.php==
 
   *  *versão:* 0.4a
-  *  *Autores:* Paulo Coutinho + Davi Tavares Ferreira
+  *  *Autores:*  Davi Tavares Ferreira + Paulo Coutinho
   *  [http://www.m2brnet.com www.m2brnet.com]
 	
 ==O que faz atualmente?==
@@ -55,7 +55,6 @@ if ($valida == 'OK') {
 	die($valida);
 }	
 }}}
-
 
 
 
