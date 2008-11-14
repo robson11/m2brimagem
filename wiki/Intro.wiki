@@ -1,5 +1,5 @@
-#summary Página de apresentação do manual / capa.
 #labels Featured
+Página de apresentação do manual / capa.
 
 =Introdução=
 
@@ -56,6 +56,5 @@ if ($valida == 'OK') {
 }	
 }}}
 
-
-
-
+==Mais em:==
+http://www.daviferreira.com/blog/2007/09/07/classe-imagem-php.html
