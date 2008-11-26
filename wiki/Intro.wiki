@@ -5,8 +5,8 @@ Página de apresentação do manual / capa.
 
 ==class.imagem.php==
 
-  *  *versão:* 0.4a
-  *  *Autores:*  Davi Tavares Ferreira + Paulo Coutinho
+  *  *versão:* 6.2
+  *  *Autores:*  Davi Tavares Ferreira
   *  [http://www.m2brnet.com www.m2brnet.com]
 	
 ==O que faz atualmente?==
