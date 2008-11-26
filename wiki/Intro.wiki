@@ -17,6 +17,7 @@ Página de apresentação do manual / capa.
   *  girar imagem
   *  marca d'água texto
   *  marca d'água (imagem)
+  *  marca d'água com posicionamento fixo
 	
 ==Falta implementar==
 
@@ -25,12 +26,11 @@ Página de apresentação do manual / capa.
   *  cor de fundo na legenda em texto (?)
   *  resize por porcentagem (extends?)
   *  crop por porcentagem (extends?)
-  *  ??
 	
 ==Exemplo de uso:==
 {{{	
 // include da classe imagem
-include('class.imagem.php');
+include('class.m2brimagem.php');
 
 // instancia objeto e carrega imagem
 $oImg = new imagem('3.jpg');
